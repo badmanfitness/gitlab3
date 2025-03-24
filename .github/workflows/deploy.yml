@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main
+      - master
   workflow_dispatch:  # Allows manual triggering of the workflow
 
 permissions:
@@ -48,7 +48,7 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: "Deploy updated reports to GitHub Pages"
-          branch: main
+          branch: master
           file_pattern: docs/**
           push_options: '--force'
         env:
